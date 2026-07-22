@@ -44,7 +44,7 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServiceDetail() {
-  const service = Route.useLoaderData();
+  const service = Route.useLoaderData() as Service;
   const others = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   const bookMessage = `Hello Ocean Smile Dental Clinic, I would like to book a ${service.title} appointment.`;
