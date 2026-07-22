@@ -7,6 +7,13 @@ import childrens from "@/assets/childrens.jpg.asset.json";
 import gumDisease from "@/assets/gum-disease.jpg.asset.json";
 import braces from "@/assets/braces.jpg.asset.json";
 import retainers from "@/assets/retainers.jpg.asset.json";
+import removableOrtho from "@/assets/removable-orthodontic.jpg.asset.json";
+import wisdomTeeth from "@/assets/wisdom-teeth.jpg.asset.json";
+import fixedDentures from "@/assets/fixed-dentures.jpg.asset.json";
+import removableDentures from "@/assets/removable-dentures.jpg.asset.json";
+import veneers from "@/assets/veneers.jpg.asset.json";
+import teethMasking from "@/assets/teeth-masking.jpg.asset.json";
+import smileMakeovers from "@/assets/smile-makeovers.jpg.asset.json";
 
 export interface ServiceFAQ {
   q: string;
