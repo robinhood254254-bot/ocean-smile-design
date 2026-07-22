@@ -345,6 +345,211 @@ export const SERVICES: Service[] = [
       },
     ],
   },
+  {
+    slug: "removable-orthodontic-appliances",
+    title: "Removable Orthodontic Appliances",
+    short:
+      "Custom, removable devices that guide jaw growth and correct minor alignment issues.",
+    image: removableOrtho.url,
+    overview:
+      "Removable orthodontic appliances are custom-made devices that can be taken in and out of the mouth. They are used to correct mild alignment issues, guide jaw development in growing patients, and support early interceptive orthodontic treatment.",
+    benefits: [
+      "Comfortable and easy to clean",
+      "Ideal for early interceptive treatment",
+      "Removable for eating and brushing",
+      "Cost-effective alternative for select cases",
+    ],
+    procedure: [
+      "Orthodontic assessment and impressions",
+      "Fabrication of a custom appliance in the lab",
+      "Fitting and wear-schedule guidance",
+      "Regular reviews to monitor progress",
+    ],
+    candidates:
+      "Growing children with developing bites, patients with mild crowding or spacing, and cases where a fixed appliance is not yet indicated.",
+    faqs: [
+      { q: "How long do I wear it each day?", a: "Most removable appliances need to be worn full-time (except when eating and brushing). Your orthodontist will confirm your exact schedule." },
+      { q: "Will it affect my speech?", a: "Speech usually adapts within a few days of consistent wear." },
+    ],
+  },
+  {
+    slug: "surgical-extraction-wisdom-teeth",
+    title: "Surgical Extraction of Wisdom Teeth",
+    short:
+      "Safe surgical removal of impacted or problematic wisdom teeth to protect your oral health.",
+    image: wisdomTeeth.url,
+    overview:
+      "Wisdom teeth often lack the space to erupt normally and can become impacted, causing pain, infection or damage to neighbouring teeth. Surgical extraction is a controlled procedure performed under local anaesthesia with careful planning based on dental X-rays.",
+    benefits: [
+      "Relieves pain from impaction",
+      "Prevents infection and cyst formation",
+      "Protects adjacent teeth from damage",
+      "Reduces risk of crowding relapse",
+    ],
+    procedure: [
+      "Clinical exam and panoramic X-ray",
+      "Personalised surgical plan and consent",
+      "Local anaesthesia and sterile technique",
+      "Gentle surgical removal and suturing",
+      "Detailed aftercare instructions",
+    ],
+    recovery:
+      "Swelling and mild discomfort are normal for 3–5 days. Follow the aftercare plan, use ice packs and prescribed medication, and stick to soft foods.",
+    candidates:
+      "Adults with impacted, partially erupted or symptomatic wisdom teeth, or those referred for orthodontic reasons.",
+    faqs: [
+      { q: "Will I be awake during the procedure?", a: "Yes. It is done under local anaesthesia. You will feel pressure but not sharp pain." },
+      { q: "How long is the recovery?", a: "Most patients return to normal activities within a week. Full soft-tissue healing takes 2–3 weeks." },
+    ],
+  },
+  {
+    slug: "fixed-dentures-crowns-bridges",
+    title: "Fixed Dentures (Crowns & Bridges)",
+    short:
+      "Permanent crowns and bridges that restore missing or damaged teeth with natural aesthetics.",
+    image: fixedDentures.url,
+    overview:
+      "Crowns cap damaged teeth to protect and restore them, while bridges replace missing teeth by anchoring to adjacent teeth. Both are custom-crafted for a natural look and stable long-term function.",
+    benefits: [
+      "Restores natural chewing and speech",
+      "Blends with surrounding teeth",
+      "Fixed in place — no removal needed",
+      "Protects and stabilises adjacent teeth",
+    ],
+    procedure: [
+      "Diagnosis, X-rays and treatment planning",
+      "Tooth preparation and impressions",
+      "Temporary crown or bridge placement",
+      "Fabrication in the dental lab",
+      "Fitting, adjustment and cementation",
+    ],
+    recovery:
+      "Mild sensitivity is common for a few days. Normal brushing and flossing (with floss threaders under bridges) will keep them healthy for years.",
+    candidates:
+      "Patients with heavily damaged, cracked or root-canal-treated teeth, and those missing one or a few teeth in a row with healthy neighbours.",
+    faqs: [
+      { q: "How long do crowns and bridges last?", a: "With good oral hygiene, well-made crowns and bridges commonly last 10–15 years or more." },
+      { q: "Are they noticeable?", a: "Modern porcelain restorations are colour-matched to your natural teeth and are usually indistinguishable." },
+    ],
+  },
+  {
+    slug: "removable-dentures",
+    title: "Removable Dentures",
+    short:
+      "Comfortable full or partial dentures that restore your smile and everyday function.",
+    image: removableDentures.url,
+    overview:
+      "Removable dentures replace missing teeth using a custom-fitted acrylic or metal-framework base. They restore chewing, speech and facial support, and can be taken out for easy cleaning.",
+    benefits: [
+      "Restores smile aesthetics and confidence",
+      "Improves chewing and clear speech",
+      "Non-invasive and cost-effective",
+      "Easy to clean and maintain",
+    ],
+    procedure: [
+      "Assessment of remaining teeth and gums",
+      "Precise impressions and bite records",
+      "Try-in for shade, shape and comfort",
+      "Final fitting and adjustments",
+      "Follow-up reviews to ensure comfort",
+    ],
+    recovery:
+      "A short adaptation period is normal. Speech and chewing usually feel natural within 2–4 weeks of consistent wear.",
+    candidates:
+      "Patients missing several or all teeth in an arch, and those seeking a non-surgical, cost-effective replacement option.",
+    faqs: [
+      { q: "How do I care for my dentures?", a: "Clean them daily with a soft brush and denture cleaner, and remove them at night to let your gums rest." },
+      { q: "Will they slip when I talk or eat?", a: "Well-fitted dentures are stable. Denture adhesives or clasps can add extra security." },
+    ],
+  },
+  {
+    slug: "veneers",
+    title: "Veneers",
+    short:
+      "Ultra-thin porcelain shells that reshape and brighten the front teeth for a stunning smile.",
+    image: veneers.url,
+    overview:
+      "Veneers are custom-made shells bonded to the front surface of teeth to improve shape, colour, size and alignment. They deliver a natural, bright and balanced smile with minimal tooth reduction.",
+    benefits: [
+      "Transforms colour, shape and alignment",
+      "Natural-looking, translucent finish",
+      "Stain-resistant and long-lasting",
+      "Conservative tooth preparation",
+    ],
+    procedure: [
+      "Smile consultation and digital preview",
+      "Minimal tooth preparation and impressions",
+      "Temporary veneers while yours are crafted",
+      "Bonding of the final custom veneers",
+      "Bite check and polish",
+    ],
+    recovery:
+      "No downtime. Mild sensitivity for a few days is normal. Avoid biting hard objects to protect the veneers.",
+    candidates:
+      "Adults with discoloured, chipped, worn, mildly misaligned or gapped front teeth who want a lasting cosmetic result.",
+    faqs: [
+      { q: "How long do veneers last?", a: "High-quality porcelain veneers commonly last 10–15 years with good care." },
+      { q: "Are veneers reversible?", a: "Because a small amount of enamel is removed, veneers are generally considered a permanent restoration." },
+    ],
+  },
+  {
+    slug: "teeth-masking",
+    title: "Teeth Masking",
+    short:
+      "Advanced cosmetic masking that conceals stains, chips and irregularities for a flawless finish.",
+    image: teethMasking.url,
+    overview:
+      "Teeth masking uses cosmetic bonding and thin ceramic overlays to conceal deep discolouration, white spots, minor chips and surface irregularities — creating a uniform, natural-looking smile.",
+    benefits: [
+      "Hides stubborn stains and white spots",
+      "Evens out shape and colour",
+      "Minimally invasive procedure",
+      "Immediate cosmetic improvement",
+    ],
+    procedure: [
+      "Cosmetic assessment and shade planning",
+      "Gentle surface preparation",
+      "Layered bonding or ceramic overlay",
+      "Sculpting, curing and high-shine polish",
+    ],
+    recovery:
+      "No downtime. Avoid strongly staining foods and drinks for the first 24 hours to lock in colour.",
+    candidates:
+      "Patients with fluorosis, tetracycline staining, enamel defects or irregular tooth shapes who want a natural-looking cosmetic fix.",
+    faqs: [
+      { q: "How is masking different from whitening?", a: "Whitening lifts natural stain from within the tooth. Masking covers stains and defects that whitening cannot reach." },
+      { q: "How long does it last?", a: "Bonded masking typically lasts 5–8 years; ceramic options last longer with good care." },
+    ],
+  },
+  {
+    slug: "smile-makeovers",
+    title: "Smile Makeovers",
+    short:
+      "A fully personalised plan that combines treatments to design the smile of your dreams.",
+    image: smileMakeovers.url,
+    overview:
+      "A smile makeover is a bespoke combination of cosmetic and restorative treatments — such as whitening, veneers, crowns, bonding and gum contouring — designed together to deliver a balanced, radiant smile that suits your face and personality.",
+    benefits: [
+      "Fully customised to your goals",
+      "Addresses colour, shape, alignment and gum line",
+      "Long-lasting, natural-looking results",
+      "Boosts confidence and self-esteem",
+    ],
+    procedure: [
+      "In-depth smile consultation and photography",
+      "Digital smile design and treatment plan",
+      "Staged treatments in a comfortable sequence",
+      "Final refinements and long-term care plan",
+    ],
+    recovery:
+      "Recovery depends on the treatments used, but most smile makeovers involve minimal downtime and predictable, comfortable results.",
+    candidates:
+      "Adults who want to transform multiple aspects of their smile at once — colour, shape, spacing, gum line or overall harmony.",
+    faqs: [
+      { q: "How long does a smile makeover take?", a: "Simple makeovers can be completed in 2–4 visits. Complex cases may take a few months of planned treatment." },
+      { q: "Is it painful?", a: "Most steps are comfortable under local anaesthesia. We plan the sequence around your comfort." },
+    ],
+  },
 ];
 
 export const getService = (slug: string) =>
