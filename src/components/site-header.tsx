@@ -29,25 +29,17 @@ export function SiteHeader() {
     <header
       className={`sticky top-0 z-40 w-full transition-all ${
         scrolled
-          ? "bg-background/85 backdrop-blur border-b border-border shadow-[0_4px_20px_-12px_rgba(20,40,80,0.15)]"
-          : "bg-background/60 backdrop-blur"
+          ? "bg-background/90 backdrop-blur border-b border-border shadow-[0_4px_20px_-12px_rgba(20,40,80,0.15)]"
+          : "bg-background/70 backdrop-blur"
       }`}
     >
-      <div className="container-x flex h-20 items-center justify-between gap-4">
-        <Link to="/" aria-label={`${SITE.name} home`} className="flex items-center gap-3 min-w-0">
+      <div className="container-x flex h-24 md:h-28 items-center justify-between gap-4">
+        <Link to="/" aria-label={`${SITE.name} home`} className="flex items-center min-w-0">
           <img
             src={logo.url}
-            alt={`${SITE.name} logo`}
-            className="h-14 w-auto shrink-0"
-            width={64}
-            height={64}
+            alt={SITE.name}
+            className={`w-auto shrink-0 transition-all ${scrolled ? "h-16 md:h-20" : "h-20 md:h-24"}`}
           />
-          <span className="hidden sm:flex flex-col leading-tight min-w-0">
-            <span className="text-base font-bold text-primary truncate">Ocean Smile</span>
-            <span className="text-[11px] uppercase tracking-[0.18em] text-accent font-semibold">
-              Dental Clinic
-            </span>
-          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

@@ -1,3 +1,5 @@
+import businessCard from "@/assets/business-card.pdf.asset.json";
+
 export const SITE = {
   name: "Ocean Smile Dental Clinic",
   shortName: "Ocean Smile",
@@ -17,6 +19,7 @@ export const SITE = {
     { day: "Saturday", time: "9:00 AM – 5:00 PM" },
     { day: "Sunday", time: "Emergency Only" },
   ],
+  businessCardUrl: businessCard.url,
 };
 
 export const waLink = (message: string) =>
