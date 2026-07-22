@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Facebook, Mail, MapPin, Phone, Clock, Download } from "lucide-react";
 import logo from "@/assets/logo.png.asset.json";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
@@ -10,25 +10,33 @@ export function SiteFooter() {
       <div className="container-x py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="" className="h-14 w-auto bg-white/95 rounded-xl p-1.5" />
-            <div className="leading-tight">
-              <div className="font-bold text-lg">Ocean Smile</div>
-              <div className="text-xs uppercase tracking-[0.18em] text-white/70">Dental Clinic</div>
-            </div>
+            <img src={logo.url} alt={SITE.name} className="h-20 w-auto bg-white/95 rounded-xl p-2" />
           </div>
           <p className="mt-4 text-sm text-white/75 max-w-xs">
             {SITE.tagline}
           </p>
-          <a
-            href={SITE.facebook}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Facebook"
-            className="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-accent hover:text-accent-foreground transition"
-          >
-            <Facebook className="h-4 w-4" />
-          </a>
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href={SITE.facebook}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Facebook"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-accent hover:text-accent-foreground transition"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a
+              href={SITE.businessCardUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+              download="Ocean-Smile-Business-Card.pdf"
+              className="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-accent hover:text-accent-foreground transition px-4 h-10 text-xs font-semibold"
+            >
+              <Download className="h-3.5 w-3.5" /> Business card
+            </a>
+          </div>
         </div>
+
 
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white/80">Quick links</h3>

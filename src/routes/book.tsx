@@ -28,6 +28,7 @@ const bookingSchema = z.object({
   email: z.string().trim().email("Please enter a valid email").max(120),
   service: z.string().min(1, "Please select a service"),
   date: z.string().min(1, "Please select a preferred date"),
+  time: z.string().min(1, "Please select a preferred time"),
   notes: z.string().max(500).optional(),
 });
 
@@ -45,6 +46,7 @@ function BookPage() {
       email: String(form.get("email") ?? ""),
       service: String(form.get("service") ?? ""),
       date: String(form.get("date") ?? ""),
+      time: String(form.get("time") ?? ""),
       notes: String(form.get("notes") ?? ""),
     };
     const result = bookingSchema.safeParse(values);
@@ -66,6 +68,7 @@ function BookPage() {
       `• Email: ${result.data.email}\n` +
       `• Service: ${svc ? svc.title : result.data.service}\n` +
       `• Preferred date: ${result.data.date}\n` +
+      `• Preferred time: ${result.data.time}\n` +
       (result.data.notes ? `• Notes: ${result.data.notes}\n` : "") +
       `\nThank you.`;
     setSubmitted(true);
@@ -138,6 +141,13 @@ function BookPage() {
                 <input id="date" name="date" type="date" required min={today} className={inputCls} />
                 {errors.date && <p className={errCls}>{errors.date}</p>}
               </div>
+            </div>
+
+            <div>
+              <label htmlFor="time" className={labelCls}>Preferred time</label>
+              <input id="time" name="time" type="time" required min="08:00" max="19:00" className={inputCls} />
+              <p className="mt-1 text-xs text-muted-foreground">Mon–Fri 8:00 AM – 7:00 PM · Sat 9:00 AM – 5:00 PM</p>
+              {errors.time && <p className={errCls}>{errors.time}</p>}
             </div>
 
             <div>

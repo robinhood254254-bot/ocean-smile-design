@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
+import { BLOG_POSTS } from "@/lib/blogs";
 
 export const Route = createFileRoute("/blogs")({
   head: () => ({
@@ -14,73 +15,6 @@ export const Route = createFileRoute("/blogs")({
 });
 
 const CATEGORIES = ["Oral Health", "Preventive Care", "Children", "Orthodontics", "Emergencies"];
-
-const POSTS = [
-  {
-    title: "Brushing and flossing: a simple daily routine that works",
-    category: "Oral Health",
-    excerpt:
-      "Consistent brushing twice a day and daily flossing remain the foundation of good oral health. Here's how to make the most of them.",
-    date: "Coming soon",
-    minutes: "4 min read",
-  },
-  {
-    title: "How often should you really visit the dentist?",
-    category: "Preventive Care",
-    excerpt:
-      "For most adults, a check-up every six months helps prevent problems early. Some patients benefit from a shorter interval — here's why.",
-    date: "Coming soon",
-    minutes: "3 min read",
-  },
-  {
-    title: "Your child's first dental visit: what to expect",
-    category: "Children",
-    excerpt:
-      "A calm, positive first visit sets the tone for a lifetime of comfortable dental care. Practical tips for parents.",
-    date: "Coming soon",
-    minutes: "5 min read",
-  },
-  {
-    title: "Braces vs clear aligners: understanding the options",
-    category: "Orthodontics",
-    excerpt:
-      "Both approaches can produce excellent results. The right choice depends on your bite, lifestyle and treatment goals.",
-    date: "Coming soon",
-    minutes: "6 min read",
-  },
-  {
-    title: "Toothache at night: what to do before you can see a dentist",
-    category: "Emergencies",
-    excerpt:
-      "Simple steps to manage dental pain safely while you arrange an emergency appointment.",
-    date: "Coming soon",
-    minutes: "4 min read",
-  },
-  {
-    title: "The truth about teeth whitening",
-    category: "Oral Health",
-    excerpt:
-      "What professional whitening can and can't do — and how to protect your enamel while brightening your smile.",
-    date: "Coming soon",
-    minutes: "5 min read",
-  },
-  {
-    title: "Root canal treatment: separating fact from fiction",
-    category: "Preventive Care",
-    excerpt:
-      "Root canals have a scary reputation, but modern techniques make them a comfortable, tooth-saving option.",
-    date: "Coming soon",
-    minutes: "6 min read",
-  },
-  {
-    title: "Diet, sugar and your teeth",
-    category: "Preventive Care",
-    excerpt:
-      "How the frequency of sugary snacks matters more than the amount, and small changes that protect your enamel.",
-    date: "Coming soon",
-    minutes: "4 min read",
-  },
-];
 
 function Blogs() {
   return (
@@ -110,18 +44,27 @@ function Blogs() {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {POSTS.map((p) => (
-            <article key={p.title} className="card-elevated card-elevated-hover p-6 flex flex-col">
+          {BLOG_POSTS.map((p) => (
+            <Link
+              key={p.slug}
+              to="/blogs/$slug"
+              params={{ slug: p.slug }}
+              className="card-elevated card-elevated-hover p-6 flex flex-col group"
+            >
               <div className="text-xs font-semibold uppercase tracking-wider text-accent">
                 {p.category}
               </div>
-              <h2 className="mt-3 text-lg font-semibold text-primary leading-snug">{p.title}</h2>
+              <h2 className="mt-3 text-lg font-semibold text-primary leading-snug group-hover:text-accent transition-colors">
+                {p.title}
+              </h2>
               <p className="mt-3 text-sm text-muted-foreground flex-1">{p.excerpt}</p>
               <div className="mt-5 flex items-center justify-between text-xs text-muted-foreground">
-                <span className="inline-flex items-center gap-1"><Calendar className="h-3.5 w-3.5" /> {p.date}</span>
                 <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {p.minutes}</span>
+                <span className="inline-flex items-center gap-1 text-accent font-semibold">
+                  Read <ArrowRight className="h-3.5 w-3.5" />
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 

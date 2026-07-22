@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ShieldCheck, HeartHandshake, Sparkles, Clock, Phone,
-  ArrowRight, CheckCircle2, Star, MessageCircle,
+  ArrowRight, CheckCircle2, Star, MessageCircle, ShieldPlus,
 } from "lucide-react";
 import { SERVICES } from "@/lib/services";
 import { SITE, waLink } from "@/lib/site";
+import heroImage from "@/assets/hero-ocean-smile.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,12 +35,12 @@ const TRUST = [
 ];
 
 const REVIEWS = [
-  { name: "Amina H.", rating: 5, text: "Very thorough and gentle. The team explained every step of my root canal and I felt at ease throughout." },
-  { name: "Brian O.", rating: 4, text: "Clean clinic and friendly staff. My cleaning appointment was efficient and comfortable." },
-  { name: "Grace M.", rating: 5, text: "My children actually look forward to their dental visits now. Kind and patient with kids." },
-  { name: "Peter K.", rating: 3, text: "Good treatment overall. Waiting time was a little longer than I expected but the care was solid." },
-  { name: "Zainab S.", rating: 4, text: "Fair prices and honest advice. They didn't push anything I didn't need." },
-  { name: "Daniel W.", rating: 5, text: "Handled my emergency the same day. Professional and calm from start to finish." },
+  { name: "Amina H.", rating: 5, text: "Very thorough and gentle. The team explained every step of my root canal and I felt completely at ease throughout the visit." },
+  { name: "Brian O.", rating: 5, text: "Spotless clinic and truly friendly staff. My cleaning appointment was efficient, comfortable and finished exactly on time." },
+  { name: "Grace M.", rating: 5, text: "My children actually look forward to their dental visits now. So kind, patient and reassuring with the little ones." },
+  { name: "Peter K.", rating: 4, text: "Excellent treatment and honest advice. The team took time to explain the plan and made me feel genuinely cared for." },
+  { name: "Zainab S.", rating: 5, text: "Fair pricing and transparent recommendations. They only advised what I actually needed — I'll definitely be back." },
+  { name: "Daniel W.", rating: 5, text: "Handled my emergency the same day with total professionalism. Calm, skilful and reassuring from start to finish." },
 ];
 
 const FAQS = [
@@ -103,29 +104,58 @@ function Home() {
           </div>
 
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              {SERVICES.slice(0, 4).map((s, i) => (
-                <Link
-                  key={s.slug}
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className={`card-elevated card-elevated-hover group overflow-hidden ${
-                    i % 2 === 0 ? "translate-y-4" : ""
-                  }`}
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={s.image}
-                      alt={s.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+            <div className="relative overflow-hidden rounded-[2rem] shadow-glow ring-1 ring-primary/10">
+              <img
+                src={heroImage.url}
+                alt="Ocean Smile Dental Clinic — Mombasa"
+                className="w-full h-full object-cover aspect-[4/5] sm:aspect-[4/4]"
+              />
+              {/* Futuristic gradient overlay */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent" />
+
+              {/* Floating stats badge — top left */}
+              <div className="absolute top-5 left-5 rounded-2xl bg-background/85 backdrop-blur-md px-4 py-3 shadow-soft ring-1 ring-white/40">
+                <div className="flex items-center gap-2">
+                  <div className="flex">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="h-3.5 w-3.5 fill-accent text-accent" />
+                    ))}
                   </div>
-                  <div className="p-4">
-                    <div className="text-sm font-semibold text-primary">{s.title}</div>
+                  <span className="text-xs font-bold text-primary">5.0</span>
+                </div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                  Patient rated
+                </div>
+              </div>
+
+              {/* Futuristic badge — bottom right */}
+              <div className="absolute bottom-5 right-5 max-w-[75%]">
+                <div className="rounded-2xl bg-background/90 backdrop-blur-xl px-5 py-4 shadow-glow ring-1 ring-primary/20">
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary to-accent blur-md opacity-60" />
+                      <div className="relative inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white">
+                        <ShieldPlus className="h-5 w-5" />
+                      </div>
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+                        </span>
+                        <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent">Open now</span>
+                      </div>
+                      <div className="mt-0.5 text-sm font-bold text-primary leading-tight">
+                        Same-day emergency
+                      </div>
+                      <div className="text-[11px] text-muted-foreground">
+                        Certified · Modern · Trusted
+                      </div>
+                    </div>
                   </div>
-                </Link>
-              ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -231,10 +261,10 @@ function Home() {
             <div className="rounded-3xl bg-gradient-to-br from-primary to-accent p-1 shadow-glow">
               <div className="rounded-[calc(theme(borderRadius.3xl)-4px)] bg-background p-8 grid grid-cols-2 gap-6">
                 {[
-                  { k: "9+", v: "Core services" },
-                  { k: "6 days", v: "Open weekly" },
-                  { k: "All ages", v: "Family care" },
-                  { k: "Same day", v: "Emergency slots" },
+              { k: "16+", v: "Dental services" },
+              { k: "6 days", v: "Open weekly" },
+              { k: "All ages", v: "Family care" },
+              { k: "Same day", v: "Emergency slots" },
                 ].map((s) => (
                   <div key={s.v} className="rounded-2xl bg-secondary p-5">
                     <div className="text-3xl font-bold text-gradient-brand">{s.k}</div>
