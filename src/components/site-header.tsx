@@ -33,16 +33,16 @@ export function SiteHeader() {
           : "bg-background/70 backdrop-blur"
       }`}
     >
-      <div className="container-x flex h-24 md:h-28 items-center justify-between gap-4">
+      <div className="container-x flex h-28 md:h-32 items-center justify-between gap-4">
         <Link to="/" aria-label={`${SITE.name} home`} className="flex items-center min-w-0">
           <img
             src={logo.url}
             alt={SITE.name}
-            className={`w-auto shrink-0 transition-all ${scrolled ? "h-16 md:h-20" : "h-20 md:h-24"}`}
+            className={`w-auto shrink-0 transition-all ${scrolled ? "h-24 md:h-28" : "h-28 md:h-36"}`}
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1 rounded-full border border-border/70 bg-background/80 backdrop-blur px-2 py-1.5 shadow-soft">
           {NAV.map((item) => {
             const active =
               item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
@@ -50,9 +50,9 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+                className={`relative px-5 py-2 text-sm font-medium rounded-full transition-colors ${
                   active
-                    ? "text-primary bg-primary-soft"
+                    ? "text-primary-foreground bg-primary shadow-soft"
                     : "text-foreground/70 hover:text-primary hover:bg-primary-soft/60"
                 }`}
               >
