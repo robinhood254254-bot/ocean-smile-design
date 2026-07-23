@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { SERVICES } from "@/lib/services";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Dental Services — Ocean Smile Dental Clinic" },
@@ -34,12 +34,13 @@ function ServicesPage() {
 
       <section className="container-x py-16 md:py-20">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
+          {SERVICES.map((s, i) => (
             <Link
               key={s.slug}
               to="/services/$slug"
               params={{ slug: s.slug }}
-              className="card-elevated card-elevated-hover group overflow-hidden flex flex-col"
+              style={{ animationDelay: `${(i % 6) * 80}ms` }}
+              className={`card-elevated card-elevated-hover group overflow-hidden flex flex-col reveal-${i % 2 === 0 ? "left" : "right"}`}
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
