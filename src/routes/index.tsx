@@ -16,11 +16,11 @@ export const Route = createFileRoute("/")({
         content:
           "Patient-centred dental care in Mombasa. Cleanings, fillings, root canals, orthodontics, children's dentistry and emergency care from Ocean Smile Dental Clinic.",
       },
-      { property: "og:title", content: "Ocean Smile Dental Clinic — Mombasa" },
+      { property: "og:title", content: "Ocean Smile Dental Clinic — Modern Dental Care in Mombasa" },
       {
         property: "og:description",
         content:
-          "Reliable, modern and compassionate dental care for the whole family.",
+          "Patient-centred dental care in Mombasa. Cleanings, fillings, root canals, orthodontics, children's dentistry and emergency care from Ocean Smile Dental Clinic.",
       },
     ],
   }),

@@ -77,25 +77,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ocean Smile Dental Clinic — Modern, Patient-Centred Dentistry in Mombasa" },
+      { title: "Ocean Smile Dental Clinic — Modern Dental Care in Mombasa" },
       {
         name: "description",
         content:
-          "Ocean Smile Dental Clinic offers modern, patient-centred dental care in Mombasa, including cleanings, fillings, root canals, orthodontics and emergency dentistry.",
+          "Patient-centred dental care in Mombasa. Cleanings, fillings, root canals, orthodontics, children's dentistry and emergency care from Ocean Smile Dental Clinic.",
       },
-      { property: "og:title", content: "Ocean Smile Dental Clinic — Mombasa" },
+      { property: "og:title", content: "Ocean Smile Dental Clinic — Modern Dental Care in Mombasa" },
       {
         property: "og:description",
         content:
-          "Reliable, evidence-based dental care for the whole family. Book your appointment today.",
+          "Patient-centred dental care in Mombasa. Cleanings, fillings, root canals, orthodontics, children's dentistry and emergency care from Ocean Smile Dental Clinic.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#1f3a68" },
+      { name: "twitter:title", content: "Ocean Smile Dental Clinic — Modern Dental Care in Mombasa" },
+      { name: "twitter:description", content: "Patient-centred dental care in Mombasa. Cleanings, fillings, root canals, orthodontics, children's dentistry and emergency care from Ocean Smile Dental Clinic." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/p0oIgEdCQidCN4QEk9PGDDcJJAn1/social-images/social-1784835270582-ChatGPT_Image_Jul_23,_2026,_10_33_47_PM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/p0oIgEdCQidCN4QEk9PGDDcJJAn1/social-images/social-1784835270582-ChatGPT_Image_Jul_23,_2026,_10_33_47_PM.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
