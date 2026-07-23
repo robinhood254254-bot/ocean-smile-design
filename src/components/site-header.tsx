@@ -33,12 +33,12 @@ export function SiteHeader() {
           : "bg-background/70 backdrop-blur"
       }`}
     >
-      <div className="container-x flex h-28 md:h-32 items-center justify-between gap-4">
+      <div className="container-x flex h-40 md:h-52 items-center justify-between gap-4">
         <Link to="/" aria-label={`${SITE.name} home`} className="flex items-center min-w-0">
           <img
             src={logo.url}
             alt={SITE.name}
-            className={`w-auto shrink-0 transition-all ${scrolled ? "h-24 md:h-28" : "h-28 md:h-36"}`}
+            className={`w-auto shrink-0 transition-all ${scrolled ? "h-32 md:h-44" : "h-40 md:h-60"}`}
           />
         </Link>
 
