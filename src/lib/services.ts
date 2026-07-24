@@ -6,7 +6,9 @@ import emergency from "@/assets/emergency.png.asset.json";
 import childrens from "@/assets/childrens.jpg.asset.json";
 import gumDisease from "@/assets/gum-disease.jpg.asset.json";
 import braces from "@/assets/braces.jpg.asset.json";
-import retainers from "@/assets/retainers.jpg.asset.json";
+import retainers from "@/assets/dental-retainers-new.jpg.asset.json";
+import oralHabits from "@/assets/oral-habits-management.jpg.asset.json";
+import teethGrinding from "@/assets/teeth-grinding-management.jpg.asset.json";
 import removableOrtho from "@/assets/removable-orthodontic.jpg.asset.json";
 import wisdomTeeth from "@/assets/wisdom-teeth.jpg.asset.json";
 import fixedDentures from "@/assets/fixed-dentures.jpg.asset.json";
@@ -548,6 +550,60 @@ export const SERVICES: Service[] = [
     faqs: [
       { q: "How long does a smile makeover take?", a: "Simple makeovers can be completed in 2–4 visits. Complex cases may take a few months of planned treatment." },
       { q: "Is it painful?", a: "Most steps are comfortable under local anaesthesia. We plan the sequence around your comfort." },
+    ],
+  },
+  {
+    slug: "oral-habits-management",
+    title: "Oral Habits Management",
+    short:
+      "Custom habit-breaker appliances and coaching to correct thumb-sucking, tongue thrusting and other oral habits.",
+    image: oralHabits.url,
+    overview:
+      "Persistent oral habits such as thumb-sucking, finger-sucking, tongue thrusting and nail biting can affect the way teeth and jaws develop. Our habit management programme combines gentle behavioural coaching with custom appliances to guide children — and adults — toward healthier oral habits and better long-term alignment.",
+    benefits: [
+      "Prevents bite and jaw development problems",
+      "Protects tooth alignment and speech",
+      "Custom-made for comfort and effectiveness",
+      "Combines coaching with clinical support",
+    ],
+    procedure: [
+      "Assessment of habits, teeth and jaw development",
+      "Custom impressions for a habit-breaker appliance",
+      "Fitting, wear guidance and parent coaching",
+      "Regular reviews to monitor progress",
+    ],
+    candidates:
+      "Children with prolonged thumb, finger or dummy habits, tongue thrusting or mouth breathing — and adults with habits affecting their teeth or bite.",
+    faqs: [
+      { q: "At what age should we intervene?", a: "Most oral habits are best addressed between ages 4 and 8, before they influence permanent tooth eruption." },
+      { q: "Does the appliance hurt?", a: "There is a short adaptation period. Most children feel comfortable within a few days of consistent wear." },
+    ],
+  },
+  {
+    slug: "teeth-grinding-management",
+    title: "Teeth Grinding Management",
+    short:
+      "Custom night guards and bite therapy to protect your teeth from bruxism (grinding and clenching).",
+    image: teethGrinding.url,
+    overview:
+      "Teeth grinding and clenching (bruxism) can wear down enamel, crack teeth, strain the jaw joint and cause headaches. We assess the cause, protect your teeth with a custom-fitted night guard, and address the muscles and bite that drive the habit.",
+    benefits: [
+      "Protects enamel from wear and fractures",
+      "Reduces jaw pain and morning headaches",
+      "Custom-fitted for comfortable overnight wear",
+      "Improves sleep quality and jaw comfort",
+    ],
+    procedure: [
+      "Clinical exam and bite analysis",
+      "Digital or physical impressions",
+      "Fabrication of a custom night guard",
+      "Fitting, adjustment and review",
+    ],
+    candidates:
+      "Patients who wake with jaw soreness or headaches, notice worn or chipped teeth, or have been told they grind or clench during sleep.",
+    faqs: [
+      { q: "Are over-the-counter guards enough?", a: "Custom guards fit precisely, last longer and protect your teeth and joints far better than boil-and-bite options." },
+      { q: "Will a night guard stop the grinding?", a: "It protects your teeth and reduces symptoms. We also address stress, bite and muscle triggers where relevant." },
     ],
   },
 ];

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Mail, MapPin, Phone, Clock, Download } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/ocean-smile-logo-horizontal.png.asset.json";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 
@@ -9,8 +9,8 @@ export function SiteFooter() {
     <footer className="mt-24 bg-primary text-primary-foreground">
       <div className="container-x py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-            <img src={logo.url} alt={SITE.name} className="h-20 w-auto bg-white/95 rounded-xl p-2" />
+          <div className="rounded-2xl bg-white p-3 inline-block">
+            <img src={logo.url} alt={SITE.name} className="h-14 md:h-16 w-auto" />
           </div>
           <p className="mt-4 text-sm text-white/75 max-w-xs">
             {SITE.tagline}
@@ -45,6 +45,7 @@ export function SiteFooter() {
               { to: "/", label: "Home" },
               { to: "/about", label: "About" },
               { to: "/services", label: "Services" },
+              { to: "/why-choose-us", label: "Why Choose Us" },
               { to: "/blogs", label: "Blogs" },
               { to: "/book", label: "Book Appointment" },
               { to: "/contact", label: "Contact" },
