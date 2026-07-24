@@ -45,6 +45,7 @@ export function SiteFooter() {
               { to: "/", label: "Home" },
               { to: "/about", label: "About" },
               { to: "/services", label: "Services" },
+              { to: "/why-choose-us", label: "Why Choose Us" },
               { to: "/blogs", label: "Blogs" },
               { to: "/book", label: "Book Appointment" },
               { to: "/contact", label: "Contact" },
