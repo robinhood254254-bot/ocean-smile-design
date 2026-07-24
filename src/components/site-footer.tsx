@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Mail, MapPin, Phone, Clock, Download } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/ocean-smile-logo-horizontal.png.asset.json";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 
