@@ -9,8 +9,8 @@ export function SiteFooter() {
     <footer className="mt-24 bg-primary text-primary-foreground">
       <div className="container-x py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-            <img src={logo.url} alt={SITE.name} className="h-20 w-auto bg-white/95 rounded-xl p-2" />
+          <div className="rounded-2xl bg-white p-3 inline-block">
+            <img src={logo.url} alt={SITE.name} className="h-14 md:h-16 w-auto" />
           </div>
           <p className="mt-4 text-sm text-white/75 max-w-xs">
             {SITE.tagline}
