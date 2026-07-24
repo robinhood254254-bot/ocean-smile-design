@@ -5,14 +5,15 @@ import logo from "@/assets/ocean-smile-logo-horizontal.png.asset.json";
 import { SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
 
-const NAV = [
+type NavItem = { to: string; label: string; hasMega?: boolean };
+const NAV: readonly NavItem[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services", hasMega: true },
   { to: "/why-choose-us", label: "Why Choose Us" },
   { to: "/blogs", label: "Blog" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
